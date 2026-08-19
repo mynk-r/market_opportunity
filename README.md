@@ -103,8 +103,8 @@ Population is used to contextualise:
 
 ## Repository Structure
 
+```text
 india-market-opportunity-engine/
-│
 ├── 00_clean.ipynb
 │
 ├── engine/
@@ -115,7 +115,6 @@ india-market-opportunity-engine/
 │   └── 05_ML.ipynb
 │
 ├── data/
-│   │
 │   ├── raw/
 │   │   ├── india_startup_master_dataset.csv
 │   │   ├── internet_penetration.csv
@@ -141,7 +140,7 @@ india-market-opportunity-engine/
 │   └── 03_opportunity_engine.sql
 │
 ├── dashboard/
-│   └── [Tableau / streamlit files - Coming Soon]
+│   └── [Tableau / Streamlit files - Coming Soon]
 │
 └── README.md
 
