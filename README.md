@@ -71,6 +71,82 @@ Prioritizes markets where:
 
 ---
 
+## 📊 Data Sources:
+
+The project combines multiple datasets to create a state–industry panel.
+
+### 1. Startup Ecosystem Data (DPIIT): 
+Startup data contains information on recognized startups across:
+- State
+- Industry
+- Year
+- Startup count
+This forms the core of the market activity analysis.
+
+### 2. NSVA — Net State Value Added (RBI DBIE)
+NSVA is used as a proxy for state-level economic output. It enables the engine to distinguish between:
+- Large economies with relatively strong startup ecosystems
+- Large economies with relatively weak startup penetration
+- Smaller economies with rapidly developing startup ecosystems
+
+### 3. Internet Penetration (WORLD BANK)
+Internet penetration is used as a digital-market readiness indicator. It helps capture the underlying digital accessibility of a market.
+
+### 4. Population (WORLD BANK)
+Population is used to contextualise:
+- Market scale
+- Startup activity
+- Economic output
+- Digital penetration
+
+---
+
+## Repository Structure
+
+india-market-opportunity-engine/
+│
+├── 00_clean.ipynb
+│
+├── engine/
+│   ├── 01_EDA.ipynb
+│   ├── 02_Feature.ipynb
+│   ├── 03_Opportunity.ipynb
+│   ├── 04_Explainability.ipynb
+│   └── 05_ML.ipynb
+│
+├── data/
+│   │
+│   ├── raw/
+│   │   ├── india_startup_master_dataset.csv
+│   │   ├── internet_penetration.csv
+│   │   ├── nsva_data.csv
+│   │   ├── population.csv
+│   │   └── startups_dpiit_2016_2025.csv
+│   │
+│   ├── processed/
+│   │   ├── engine_latest_data.csv
+│   │   ├── engine_master_data.csv
+│   │   ├── india_market_opportunity_engine.csv
+│   │   ├── opportunity_engine.csv
+│   │   ├── opportunity_engine_final.csv
+│   │   └── top_market_opportunities.csv
+│   │
+│   └── ML/
+│       ├── india_market_opportunity_engine.csv
+│       └── ml_growth_predictions.csv
+│
+├── sql/
+│   ├── 01_database_setup.sql
+│   ├── 02_business_analysis.sql
+│   └── 03_opportunity_engine.sql
+│
+├── dashboard/
+│   └── [Tableau / streamlit files - Coming Soon]
+│
+└── README.md
+
+---
+
 # 🧩 Project Architecture
 
 The project follows an end-to-end analytics pipeline:
